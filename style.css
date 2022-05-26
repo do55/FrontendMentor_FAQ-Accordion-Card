@@ -1,0 +1,190 @@
+@import url("https://fonts.google.com/specimen/Kumbh+Sans");
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  background: linear-gradient(to top, hsl(240, 73%, 65%), hsl(273, 75%, 66%))
+    no-repeat;
+  z-index: 10;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.card {
+  width: 60vw;
+  height: 60vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.photos {
+  position: relative;
+}
+
+.square {
+  position: absolute;
+  width: 45vw;
+  height: auto;
+  top: -37%;
+  left: -45%;
+  z-index: -10;
+}
+
+.cube {
+  position: absolute;
+  top: 35%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+
+.woman {
+  position: absolute;
+  top: 13%;
+  left: -7%;
+  width: 41%;
+  height: auto;
+}
+
+h1 {
+  font-weight: 900;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 18px;
+}
+
+.accordion {
+  background-color: white;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 70%;
+  text-align: left;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1.5px solid hsl(240, 5%, 91%);
+  outline: none;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
+}
+
+.active,
+.accordion:hover {
+  background-color: white;
+  color: hsl(14, 88%, 65%);
+}
+
+.arrow {
+  position: absolute;
+  right: 140px;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+  .photos {
+    position: relative;
+  }
+
+  .square {
+    position: absolute;
+    width: 45vw;
+    height: auto;
+    top: -5%;
+    left: -30%;
+    z-index: -10;
+  }
+
+  .cube {
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%);
+    z-index: 1;
+  }
+
+  .woman {
+    position: absolute;
+    top: 21%;
+    left: -7%;
+    width: 51%;
+    height: auto;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    display: none;
+  }
+
+  .woman {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    margin-left: -37%;
+    width: 70%;
+    height: auto;
+  }
+
+  .square {
+    position: absolute;
+    width: 70%;
+    height: auto;
+    top: -23%;
+    left: 50%;
+    margin-left: -37%;
+    z-index: -10;
+  }
+
+  .cube {
+    position: absolute;
+    top: -8%;
+    transform: translate(35%);
+    z-index: 1;
+    width: 6em;
+  }
+  .card {
+    width: 90vw;
+    height: 70vh;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .accordion {
+    width: 100%;
+  }
+
+  .arrow {
+    right: 10px;
+  }
+}
